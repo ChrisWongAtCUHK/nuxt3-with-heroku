@@ -7,3 +7,7 @@ axiosApiClient.defaults.baseURL = "https://heroku-spring-boot-2681ceda9868.herok
 export const getQuotes = () =>{
   return axiosApiClient.get('/quotes')
 } 
+
+export const getQuote = (id) =>{
+  return axiosApiClient.get(`/quotes/${id}`)
+}   

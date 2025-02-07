@@ -12,6 +12,9 @@
                   <tbody>                 
                       <tr v-for="quote in quotes" :key="quote.id">
                           <td>{{quote.quote}}</td>
+                          <td>
+                            <NuxtLink :to="`/show/${quote.id}`" class="btn btn-outline-info mx-1">Show</NuxtLink>
+                          </td>
                       </tr>                         
                   </tbody>
               </table>
