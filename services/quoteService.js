@@ -10,4 +10,12 @@ export const getQuotes = () =>{
 
 export const getQuote = (id) =>{
   return axiosApiClient.get(`/quotes/${id}`)
-}   
+}
+
+export const createQuote = (quote) =>{
+  return axiosApiClient.post('/quotes', quote, {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  })
+}

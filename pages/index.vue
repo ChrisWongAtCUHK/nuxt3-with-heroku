@@ -2,6 +2,12 @@
   <div class="container">
       <h2 class="text-center mt-5 mb-3">Quotes</h2>
       <div class="card">
+          <div class="card-header">
+              <NuxtLink to="/create"
+                  class="btn btn-outline-primary"
+                  >Create New Quote
+              </NuxtLink>
+          </div>
           <div class="card-body">
               <table class="table table-bordered">
                   <thead>
