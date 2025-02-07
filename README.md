@@ -1,3 +1,4 @@
+[heroku-spring-boot](https://github.com/ChrisWongAtCUHK/heroku-spring-boot)
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
