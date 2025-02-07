@@ -1,1 +1,0 @@
-import{L as o}from"./CN0qo6aT.js";const t=o.create();t.defaults.baseURL="https://heroku-spring-boot-2681ceda9868.herokuapp.com";const a=()=>t.get("/quotes"),r=e=>t.get(`/quotes/${e}`);export{r as a,a as g};

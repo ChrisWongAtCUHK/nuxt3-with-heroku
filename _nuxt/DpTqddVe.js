@@ -1,0 +1,1 @@
+import{N as o}from"./B59VwJ9a.js";const t=o.create();t.defaults.baseURL="https://heroku-spring-boot-2681ceda9868.herokuapp.com";const a=()=>t.get("/quotes"),r=e=>t.get(`/quotes/${e}`),n=e=>t.post("/quotes",e,{headers:{"Content-Type":"text/plain"}});export{r as a,n as c,a as g};
