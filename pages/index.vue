@@ -20,6 +20,7 @@
                           <td>{{quote.quote}}</td>
                           <td>
                             <NuxtLink :to="`/show/${quote.id}`" class="btn btn-outline-info mx-1">Show</NuxtLink>
+                            <NuxtLink :to="`/edit/${quote.id}`" class="btn btn-outline-success mx-1">Edit</NuxtLink>
                           </td>
                       </tr>                         
                   </tbody>

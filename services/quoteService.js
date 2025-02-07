@@ -19,3 +19,11 @@ export const createQuote = (quote) =>{
     },
   })
 }
+
+export const updateQuote = (id, quote) =>{
+  return axiosApiClient.post(`/quotes/${id}`, quote, {
+    headers: {
+      "Content-Type": "text/plain",
+    },
+  })
+}
