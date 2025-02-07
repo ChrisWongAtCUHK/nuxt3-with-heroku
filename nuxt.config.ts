@@ -4,5 +4,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     baseURL: '/nuxt3-with-heroku/'
-  }
+  },
+  css: [
+    'bootstrap/dist/css/bootstrap.css',
+  ]
 })

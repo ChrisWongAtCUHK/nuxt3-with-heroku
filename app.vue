@@ -1,6 +1,8 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtLayout>
+    <Head>
+      <title>Nuxt3 with Heroku</title>
+    </Head>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
