@@ -21,6 +21,11 @@
                           <td>
                             <NuxtLink :to="`/show/${quote.id}`" class="btn btn-outline-info mx-1">Show</NuxtLink>
                             <NuxtLink :to="`/edit/${quote.id}`" class="btn btn-outline-success mx-1">Edit</NuxtLink>
+                            <button 
+                                @click="handleDelete(quote.id)"
+                                className="btn btn-outline-danger mx-1">
+                                Delete
+                            </button>
                           </td>
                       </tr>                         
                   </tbody>
@@ -31,7 +36,8 @@
 </template>
   
 <script>
-import { getQuotes } from '~/services/quoteService'
+import { deleteQuote, getQuotes } from '~/services/quoteService'
+import Swal from 'sweetalert2'
 
 export default { 
   data() {
@@ -54,6 +60,40 @@ export default {
         .catch(error => {
           return error
       });
+    },
+    handleDelete(id){
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "You won't be able to revert this!",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+        if (result.isConfirmed) {
+          deleteQuote(id)
+            .then( response => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Quote deleted successfully!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                this.fetchQuoteList();
+                return response
+            })
+            .catch(error => {
+                Swal.fire({
+                      icon: 'error',
+                    title: 'An Error Occured!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+                return error
+            });
+        }
+      })
     }
   }
 };

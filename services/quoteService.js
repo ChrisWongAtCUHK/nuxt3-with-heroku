@@ -27,3 +27,7 @@ export const updateQuote = (id, quote) =>{
     },
   })
 }
+
+export const deleteQuote = (id) =>{
+  return axiosApiClient.delete(`/quotes/${id}`)
+}
