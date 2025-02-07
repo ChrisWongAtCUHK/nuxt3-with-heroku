@@ -1,0 +1,1 @@
+import{N as s}from"./I4iv_K8r.js";const e=s.create();e.defaults.baseURL="https://heroku-spring-boot-2681ceda9868.herokuapp.com";const r=()=>e.get("/quotes"),n=t=>e.get(`/quotes/${t}`),u=t=>e.post("/quotes",t,{headers:{"Content-Type":"text/plain"}}),p=(t,o)=>e.post(`/quotes/${t}`,o,{headers:{"Content-Type":"text/plain"}});export{r as a,u as c,n as g,p as u};
